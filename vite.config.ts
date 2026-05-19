@@ -8,8 +8,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig(() => {
+  const base = process.env.VITE_BASE_PATH || '/';
+
   return {
-    base: '/AquaInsight/',
+    base,
     define: {
       'process.env.GOOGLE_MAPS_PLATFORM_KEY': JSON.stringify(process.env.GOOGLE_MAPS_PLATFORM_KEY || ''),
       'process.env.GEMINI_API_KEY': JSON.stringify(process.env.GEMINI_API_KEY || ''),
