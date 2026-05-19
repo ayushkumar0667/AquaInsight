@@ -5,7 +5,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 
 async function startServer() {
   const app = express();
-  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5173;
 
   app.use(express.json());
 
