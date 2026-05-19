@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg);
+  --color-on-background: var(--on-bg);
+  --color-surface-white: var(--surface);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-primary: var(--primary);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-container: var(--surface-container);
+  --color-earth-brown: var(--earth-brown);
+  --color-alert-red: var(--alert-red);
+  --color-safe-green: var(--safe-green);
+
+  --spacing-gutter: 24px;
+  --spacing-max-width: 1280px;
+}
+
+@layer base {
+  :root {
+    --bg: #f9f9ff;
+    --on-bg: #151c27;
+    --surface: #FFFFFF;
+    --surface-container-high: #e2e8f8;
+    --surface-container-low: #f0f3ff;
+    --surface-container-highest: #dce2f3;
+    --on-surface: #151c27;
+    --primary: #005680;
+    --primary-fixed-dim: #8ecdff;
+    --secondary: #546067;
+    --tertiary: #005c51;
+    --tertiary-container: #007769;
+    --on-surface-variant: #40484f;
+    --outline-variant: #c0c7d0;
+    --surface-container: #e7eefe;
+    --earth-brown: #8B5E3C;
+    --alert-red: #E74C3C;
+    --safe-green: #27AE60;
+  }
+
+  .dark {
+    --bg: #111827;
+    --on-bg: #f9f9ff;
+    --surface: #1f2937;
+    --surface-container-high: #374151;
+    --surface-container-low: #1f2937;
+    --surface-container-highest: #4b5563;
+    --on-surface: #f9f9ff;
+    --primary: #8ecdff;
+    --primary-fixed-dim: #004b71;
+    --secondary: #bcc8d1;
+    --tertiary: #73f8e1;
+    --tertiary-container: #005046;
+    --on-surface-variant: #bcc8d1;
+    --outline-variant: #4b5563;
+    --surface-container: #1f2937;
+    --earth-brown: #8B5E3C;
+    --alert-red: #E74C3C;
+    --safe-green: #27AE60;
+  }
+}
+
+@layer utilities {
+  .font-display-lg { font-family: "DM Serif Display", serif; }
+  .text-display-lg { font-size: 48px; line-height: 56px; font-weight: 400; }
+
+  .font-headline-lg-mobile { font-family: "DM Serif Display", serif; }
+  .text-headline-lg-mobile { font-size: 28px; line-height: 36px; font-weight: 400; }
+
+  .font-body-lg { font-family: "DM Sans", sans-serif; }
+  .text-body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+
+  .font-headline-md { font-family: "DM Serif Display", serif; }
+  .text-headline-md { font-size: 24px; line-height: 32px; font-weight: 400; }
+
+  .font-body-md { font-family: "DM Sans", sans-serif; }
+  .text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+
+  .font-caption { font-family: "DM Sans", sans-serif; }
+  .text-caption { font-size: 12px; line-height: 16px; font-weight: 500; }
+
+  .font-label-mono { font-family: "JetBrains Mono", monospace; }
+  .text-label-mono { font-size: 14px; line-height: 20px; letter-spacing: 0.02em; font-weight: 500; }
+}
+
+@layer utilities {
+  .ripple-anim {
+    animation: ripple-keyframes 10s infinite linear;
+  }
+}
+
+@keyframes ripple-keyframes {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 1500px;
+    height: 1500px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AquaInsight",
+  "description": "AquaInsight landing page with rippling background, tracking water quality and usage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
